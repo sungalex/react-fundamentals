@@ -3,6 +3,12 @@ import { useEffect, useState } from "react";
 function App() {
   const [coins, setCoins] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [options, setOptions] = useState("");
+
+  const onChangeSelect = (event) => {
+    setOptions(event.target.value);
+  };
+
   useEffect(() => {
     fetch("https://api.coinpaprika.com/v1/tickers")
       .then((response) => response.json())
@@ -18,6 +24,15 @@ function App() {
       {loading ? (
         <strong>"Loading..."</strong>
       ) : (
+        <select value={options} onChange={onChangeSelect}>
+          {coins.map((coin, index) => (
+            <option key={index} id={coin.id}>
+              {coin.name} ({coin.symbol}) : ${coin.quotes.USD.price} USD
+            </option>
+          ))}
+        </select>
+      )}
+      {/* 
         <ul>
           {coins.map((coin, index) => (
             <li key={index}>
@@ -25,15 +40,6 @@ function App() {
             </li>
           ))}
         </ul>
-      )}
-      {/* 
-      <select>
-        {coins.map((coin) => (
-          <option>
-            {coin.name} ({coin.symbol}): ${coin.quotes.USD.price} USD
-          </option>
-        ))}
-      </select> 
       */}
     </div>
   );
