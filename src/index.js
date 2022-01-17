@@ -6,8 +6,14 @@ import ReactDOM from "react-dom";
 import App from "./ToDo";
  */
 
+/* 
 // Coin Tracker
 import App from "./CoinTracker";
+
+ */
+
+// Movie App
+import App from "./Movie";
 
 ReactDOM.render(
   <React.StrictMode>
