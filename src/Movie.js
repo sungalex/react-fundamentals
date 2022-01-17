@@ -1,4 +1,27 @@
 import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
+
+function Movie({ coverImg, title, summary, genres }) {
+  return (
+    <div>
+      <img src={coverImg} alt={title} />
+      <h2>{title}</h2>
+      <p>{summary}</p>
+      <ul>
+        {genres.map((g) => (
+          <li key={g}>{g}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+Movie.propTypes = {
+  coverImg: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  summary: PropTypes.string.isRequired,
+  genres: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -17,7 +40,7 @@ function App() {
   console.log(movies);
  */
 
-  /*   
+  /* 
   // useEffect - version2.0
   const getMovies = async () => {
     const response = await fetch(
@@ -54,16 +77,13 @@ function App() {
       ) : (
         <div>
           {movies.map((movie) => (
-            <div key={movie.id}>
-              <img src={movie.medium_cover_image} alt={movie.title} />
-              <h2>{movie.title}</h2>
-              <p>{movie.summary}</p>
-              <ul>
-                {movie.genres.map((g) => (
-                  <li key={g}>{g}</li>
-                ))}
-              </ul>
-            </div>
+            <Movie
+              key={movie.id}
+              coverImg={movie.medium_cover_image}
+              title={movie.title}
+              summary={movie.summary}
+              genres={movie.genres}
+            />
           ))}
         </div>
       )}
