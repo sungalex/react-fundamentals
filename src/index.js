@@ -1,19 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-/* 
-// To Do List
+/* // To Do List
 import App from "./ToDo";
  */
 
-/* 
-// Coin Tracker
+/* // Coin Tracker
 import App from "./CoinTracker";
-
  */
 
 // Movie App
-import App from "./Movie";
+import App from "./App";
 
 ReactDOM.render(
   <React.StrictMode>
