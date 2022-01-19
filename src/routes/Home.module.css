@@ -1,7 +1,19 @@
 .container {
   height: 100%;
+  display: grid;
+  grid-template-rows: 40px, 1fr;
+  padding-top: 20px;
+}
+
+.title {
+  width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 48px;
+  text-decoration: none;
+  margin: 0;
 }
 
 .loader {
@@ -10,7 +22,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 300;
+  font-weight: 600;
 }
 
 .movies {

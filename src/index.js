@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "./styles.css";
 
 /* // To Do List
 import App from "./ToDo";
