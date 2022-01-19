@@ -1,8 +1,7 @@
 .container {
   height: 100%;
-  display: grid;
-  grid-template-rows: 40px, 1fr;
-  padding-top: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .title {
