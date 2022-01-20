@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import styles from "./Movie.module.css";
 
 function Movie({ id, year, coverImg, title, summary, genres }) {
+  if (summary.length === 0) {
+    return "";
+  }
   return (
     <div className={styles.movie}>
       <img className={styles.movie__img} src={coverImg} alt={title} />
