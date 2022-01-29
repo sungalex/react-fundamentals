@@ -1,4 +1,14 @@
-# Getting Started with Create React App
+# React Fundamentals
+
+NOMAD CODERS [ReactJS로 영화 웹 서비스 만들기](https://nomadcoders.co/react-for-beginners) Study 자료 입니다.
+
+## Github Pages
+
+[Github Pages](https://sungalex.github.io/react-fundamentals/)에서 웹 페이지를 확인할 수 있습니다. \
+Github Pages 소스는 [`gh-pages` branch](https://github.com/sungalex/react-fundamentals/tree/gh-pages)에서 확인할 수 있습니다. \
+`gh-pages` branch는 [`gh-pages`](https://www.npmjs.com/package/gh-pages) Node 패키지로 Build 되었습니다.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
